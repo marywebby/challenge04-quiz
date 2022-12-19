@@ -5,12 +5,13 @@ let startQuiz = document.querySelector(".start");
 let button = document.querySelector(".start")
 let timerElement = document.querySelector(".timerCountdown")
 let answerEls = document.querySelectorAll(".answer")
-let questionEl = document.getElementById(".questions")
+let questions = document.getElementById(".questions")
 let a1 = document.getElementById("#a1")
 let b2 = document.getElementById("#b2")
 let c3 = document.getElementById("#c3")
 let d4 = document.getElementById("#d4")
 let i = 60;
+let i2 = 0;
 let timer;
 let currentQuestion = 0;
 let score = 0;
@@ -33,39 +34,28 @@ function timerCountdown(){
         }
     }, 1000);
 };
+ 
+questions.addEventListener ("click", function () {
+    for (var i2=0; i2 < myQuestions.length; i2++){
+    var response = console.alert(myquestions[i2].prompt)
+    if (response === questions[i].answer){
+        score++}
+}});
 
-function startQuestions () { 
-    
-}
 
 
 let myQuestions = [
-    {
-      question: "this is where my question will be ",
-      answers: {
-        a: "answer 1",
-        b: "answer 2",
-        c: "answer 3"
-      },
-      correctAnswer: "c"
+    { prompt: "this is where my question will be? \n(a) answer a \n(b) answer b \n(c) answer c",
+      answer: "c"
     },
-    {
-        question: "this is where my question will be ",
-        answers: {
-          a: "answer 1",
-          b: "answer 2",
-          c: "answer 3"
-        },
-        correctAnswer: "c"
+    { prompt: "this is where my question will be? \n(a) answer a \n(b) answer b \n(c) answer c",
+    answer: "c" 
     },
-    {
-        question: "this is where my question will be ",
-        answers: {
-          a: "answer 1",
-          b: "answer 2",
-          c: "answer 3"
-        },
-        correctAnswer: "c"
+    { prompt: "this is where my question will be? \n(a) answer a \n(b) answer b \n(c) answer c",
+    answer: "c"
+    },
+    {prompt: "this is where my question will be? \n(a) answer a \n(b) answer b \n(c) answer c",
+    answer: "c"
     }
 ];
 
