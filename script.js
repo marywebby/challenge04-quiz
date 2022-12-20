@@ -38,7 +38,7 @@ function timerCountdown(){
 questions.addEventListener ("click", function () {
     for (var i2=0; i2 < myQuestions.length; i2++){
     var response = console.alert(myquestions[i2].prompt)
-    if (response === questions[i].answer){
+    if (response === questions[i2].answer){
         score++}
 }});
 
